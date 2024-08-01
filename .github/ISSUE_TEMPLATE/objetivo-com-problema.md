@@ -1,38 +1,59 @@
----
 name: Objetivo com problema
-about: Reporte um objetivo que não está funcionando corretamente.
-title: ''
-labels: ''
-assignees: ''
-
----
-
-**Describe the bug**
-A clear and concise description of what the bug is.
-
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+title: Objetivo com problema
+labels: ['bug: confirmado']
+description: "Reporte um objetivo que não está funcionando corretamente."
+assignees: leogianfagna
+body:
+  - type: dropdown
+    id: servidor
+    attributes:
+      label: "Servidor"
+      description: "Qual servidor o objetivo se encontra?"
+      options:
+        - Henesys
+        - Vanillew
+        - Skyten
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: "O que acontece?"
+      description: "Defina os detalhes do problema."
+      placeholder: "Não está contabilizando X coisa fazendo de Y forma..."
+    validations:
+      required: true
+  - type: textarea
+    id: prints
+    attributes:
+      label: "Prints ou vídeos"
+      description: "Insira qualquer tipo de vídeo ou print que tiver."
+    validations:
+      required: false
+  - type: input
+    id: questinfo1
+    attributes:
+      label: "Nome do objetivo"
+      placeholder: "Senhor das moscas"
+    validations:
+      required: true
+  - type: input
+    id: questinfo2
+    attributes:
+      label: "Categoria/semana que pertence"
+      placeholder: "Colonial/Semana 2/Tutorial..."
+    validations:
+      required: true
+  - type: input
+    id: questinfo3
+    attributes:
+      label: "Posição na categoria"
+      placeholder: "4"
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Caso o objetivo seja no servidor de **Skyblock**, não esqueça de alterar o usuário
+        responsável. Sempre envie todas as informações possíveis necessárias.
