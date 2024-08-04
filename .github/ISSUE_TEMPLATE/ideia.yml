@@ -31,7 +31,7 @@ body:
     attributes:
       label: Qual o propósito da ideia?
       description: ""
-      placeholder: Ex.: Ela vai melhorar as reclamações recentes
+      placeholder: "Ex.: Ela vai melhorar as reclamações recentes"
     validations:
       required: true
   - type: textarea
