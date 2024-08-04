@@ -1,7 +1,6 @@
 name: Ideia
 description: Tive uma ideia e vamos registrar
 labels: ['ideia']
-assignees: ''
 body:
   - type: markdown
     attributes:
@@ -10,8 +9,8 @@ body:
   - type: dropdown
     id: servidor
     attributes:
-      label: "Servidor afetado"
-      description: "Essa ideia é direcionada para qual área?"
+      label: Servidor afetado
+      description: Essa ideia é direcionada para qual área?
       options:
         - Todos
         - Discord
@@ -30,8 +29,10 @@ body:
     id: proposito
     attributes:
       label: Qual o propósito da ideia?
-      description: ""
-      placeholder: "Ex.: Ela vai melhorar as reclamações recentes"
+      description: |
+        Diga o porquê dessa ideia. Ela inclusive pode ser uma
+        sugestão que você viu no Discord e está implementando com ideias.
+      placeholder: Ex. Ela vai melhorar as reclamações recentes
     validations:
       required: true
   - type: textarea
