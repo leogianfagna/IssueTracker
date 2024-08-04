@@ -1,7 +1,7 @@
 name: Tarefa
 description: Lembrar de fazer algo
 labels: tarefa
-assignees: ["leogianfagna", "Micosedeunha", "Batatoones", "lemoslucass", "MathMSilva"]
+assignees: ["leogianfagna", "Micosedeunha"]
 body:
   - type: textarea
     attributes:
