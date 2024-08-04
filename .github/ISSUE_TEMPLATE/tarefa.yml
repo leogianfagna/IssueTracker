@@ -1,11 +1,11 @@
 name: Tarefa
 description: Lembrar de fazer algo
-labels: ['tarefa']
-assignees: ['leogianfagna', 'Micosedeunha', 'Batatoones', 'lemoslucass', 'MathMSilva']
+labels: tarefa
+assignees: ["leogianfagna", "Micosedeunha", "Batatoones", "lemoslucass", "MathMSilva"]
 body:
   - type: textarea
     attributes:
-      label: Descrição da ideia
-      description: Manda a bala aqui com tudo que puder!
+      label: Descrição da tarefa
+      description: O que precisa ser feito? Você pode enviar arquivos.
     validations:
       required: true
