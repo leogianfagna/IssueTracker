@@ -15,10 +15,10 @@ jobs:
           labels=("status: desenvolvendo" "status: arquivado" "status: necessita detalhes" "status: solução encontrada" "status: reportado ao dev" "status: buscando mais ideias")
           issue_number="${{ github.event.issue.number }}"
           repo="${{ github.repository }}"
-          
+
           for label in "${labels[@]}"; do
             curl -X DELETE \
               -H "Authorization: token $GITHUB_TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
-              "https://api.github.com/repos/$repo/issues/$issue_number/labels/$label"
+              "https://api.github.com/repos/$repo/issues/$issue_number/labels/$(echo $label | sed 's/ /%20/g')"
           done
