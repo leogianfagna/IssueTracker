@@ -1,2 +1,21 @@
-# BugsAustv
-Report de bugs e a fazeres do servidor.
+# Organização AusTv
+Este é um repositório privado de organização da Austv para **reporte de bugs**, **discussão de ideias** e **tarefas/cronograma**. [Clique aqui](https://github.com/austv-minecraft/BugsAustv/issues/new/choose) para abrir algum tópico desses especificados.
+
+# Sumário
+- [Ideias propostas e discussões](https://github.com/austv-minecraft/BugsAustv/issues?q=is%3Aopen+is%3Aissue+project%3Aaustv-minecraft%2F12)
+- [Tarefas que precisam ser realizadas](https://github.com/austv-minecraft/BugsAustv/issues?q=is%3Aopen%20is%3Aissue%20project%3Aaustv-minecraft%2F10)
+- [Correções e bugs](https://github.com/austv-minecraft/BugsAustv/issues?q=is%3Aopen%20is%3Aissue%20project%3Aaustv-minecraft%2F13)
+
+# Meu trabalho
+**Clique** no seu personagem e veja seu trabalho pendente.
+
+### Adminstradores
+[![image](https://github.com/user-attachments/assets/99c3245f-5a94-4c87-8eb7-35c6a6513e43)](https://github.com/austv-minecraft/BugsAustv/issues/assigned/leogianfagna) [![image](https://github.com/user-attachments/assets/57c7143f-cc4a-4e78-9316-afb876894809)](https://github.com/austv-minecraft/BugsAustv/issues/assigned/Micosedeunha) 
+[![image](https://github.com/user-attachments/assets/e34e191d-fad1-41de-89c2-3175039c364c)](https://github.com/austv-minecraft/BugsAustv/issues/assigned/lemoslucass) [![image](https://github.com/user-attachments/assets/124012d2-92a3-4b22-80dd-5c87eddc9fdf)](https://github.com/austv-minecraft/BugsAustv/issues/assigned/Batatoones) [![image](https://github.com/user-attachments/assets/2f2b2962-56e9-4fbe-8c64-abfab39b02ed)](https://github.com/austv-minecraft/BugsAustv/issues/assigned/MathMSilva)
+
+### Ajudantes
+[![image](https://github.com/user-attachments/assets/08c17b4c-b7a9-4fdf-b362-b1a4e675c336)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/Yokiro27)
+[![image](https://github.com/user-attachments/assets/79e56a05-bbf5-4dfc-ae8e-2a23446d0dae)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/buniiswie)
+[![image](https://github.com/user-attachments/assets/94eb19e2-c3f3-4cdf-aaf7-3d5116f6cb0a)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/steliberatori)
+[![image](https://github.com/user-attachments/assets/0be30945-556b-4ae8-a3bf-e480fceec505)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/kyuu123)
+[![image](https://github.com/user-attachments/assets/dba4448b-e980-4e4d-827e-190c5eff8b40)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/andrelsbc)
