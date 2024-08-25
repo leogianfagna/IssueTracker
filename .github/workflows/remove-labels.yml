@@ -9,8 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions-ecosystem/action-remove-labels@v1
-        if: ${{ startsWith(github.event.comment.body, '/remove-labels') }}
+      - uses: actions-ecosystem/action-remove-labels@v1.3.0
         with:
           labels: |
             ideia
