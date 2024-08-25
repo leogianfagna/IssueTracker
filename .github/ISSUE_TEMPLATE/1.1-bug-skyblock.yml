@@ -1,0 +1,27 @@
+name: Bug - Skyblock
+description: Reportar um bug ou comportamento equivocado no Skyten
+labels: ['bug: confirmado']
+assignees: Micosedeunha
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Confira em responder todos os campos corretamente.
+  - type: textarea
+    attributes:
+      label: Descrição do bug
+      description: Descreva o que ocorreu de forma equivocada.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reprodução
+      description: |
+        Descreva detalhamente como reproduzir o bug. Se alguém que denunciou,
+        pergunte-o ou peça prints do bug e envie aqui.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        **Atenção:** Selecione as tags referentes a qual servidor. Caso necessário, altere o responsável por corrigir o bug. Se o bug ainda não foi confirmado, altere o tag para bug não confirmado.
