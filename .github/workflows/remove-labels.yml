@@ -1,24 +1,22 @@
-name: Remove Labels on Issue Close
+name: Remove outdated labels
 
 on:
   issues:
     types: [closed]
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
-  remove_labels:
+  remove-closed-issue-labels:
+    name: Remove closed issue labels
+    if: github.event.issue.state == 'closed'
     runs-on: ubuntu-latest
     steps:
-      - name: Remove specific labels when issue is closed
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          labels=("status: desenvolvendo" "status: arquivado" "status: necessita detalhes" "status: solução encontrada" "status: reportado ao dev" "status: buscando mais ideias")
-          issue_number="${{ github.event.issue.number }}"
-          repo="${{ github.repository }}"
-
-          for label in "${labels[@]}"; do
-            curl -X DELETE \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              -H "Accept: application/vnd.github.v3+json" \
-              "https://api.github.com/repos/$repo/issues/$issue_number/labels/$(echo $label | sed 's/ /%20/g')"
-          done
+      - uses: mondeja/remove-labels-gh-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            ideia
+            complexo
