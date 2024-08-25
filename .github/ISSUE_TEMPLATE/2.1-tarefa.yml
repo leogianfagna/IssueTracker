@@ -1,6 +1,6 @@
 name: Tarefa
 description: Lembrar de fazer algo
-labels: tarefa
+labels: ["to-do: ⚪"]
 assignees: ["leogianfagna", "Micosedeunha"]
 body:
   - type: textarea
