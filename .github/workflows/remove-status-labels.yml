@@ -1,4 +1,5 @@
-name: Remove outdated labels
+name: Remove outdated status labels
+# https://github.com/marketplace/actions/remove-labels
 
 on:
   issues:
@@ -18,9 +19,9 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
-            'status: desenvolvendo'
-            'status: arquivado'
-            'status: necessita detalhes'
-            'status: solução encontrada'
-            'status: reportado ao dev'
-            'status: buscando mais ideias'
+            status: desenvolvendo
+            status: arquivado
+            status: necessita detalhes
+            status: solução encontrada
+            status: reportado ao dev
+            status: buscando mais ideias
