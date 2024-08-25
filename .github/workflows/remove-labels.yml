@@ -18,5 +18,9 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
-            ideia
-            complexo
+            'status: desenvolvendo'
+            'status: arquivado'
+            'status: necessita detalhes'
+            'status: solução encontrada'
+            'status: reportado ao dev'
+            'status: buscando mais ideias'
