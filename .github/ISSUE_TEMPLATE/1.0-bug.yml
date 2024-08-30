@@ -21,6 +21,25 @@ body:
         pergunte-o ou peça prints do bug e envie aqui.
     validations:
       required: true
+  - type: dropdown
+    id: servidor
+    attributes:
+      label: Servidor referido
+      description: Este bug está em qual servidor?
+      options:
+        - Não especificado (qualquer)
+        - Henesys
+        - Vanillew
+        - Skyten
+        - Lobby
+        - Ausevento
+        - Discord
+        - Sites ou externos
+        - Redes sociais
+        - Um novo servidor
+      default: 0
+    validations:
+      required: true
   - type: markdown
     attributes:
       value: |
