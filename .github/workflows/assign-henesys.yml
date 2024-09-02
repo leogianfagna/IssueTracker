@@ -1,0 +1,29 @@
+name: Add Label for Henesys
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add_label:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check for henesys in the issue description
+      id: check_henesys
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const issueBody = context.payload.issue.body || '';
+          if (issueBody.toLowerCase().includes('Henesys')) {
+            return true;
+          } else {
+            return false;
+          }
+
+    - name: Add label if "henesys" is found
+      if: steps.check_henesys.outputs.result == 'true'
+      uses: actions-ecosystem/action-add-labels@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        labels: 'complexo'
