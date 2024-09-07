@@ -21,7 +21,13 @@ body:
         pergunte-o ou peça prints do bug e envie aqui.
     validations:
       required: true
-  - type: markdown
+  - type: dropdown
+    id: servidor
     attributes:
-      value: |
-        **Atenção:** Selecione as tags referentes a qual servidor. Caso necessário, altere o responsável por corrigir o bug. Se o bug ainda não foi confirmado, altere o tag para bug não confirmado.
+      label: Servidor referido
+      description: Este bug está em qual servidor?
+      options:
+        - Skyten
+      default: 0
+    validations:
+      required: false
