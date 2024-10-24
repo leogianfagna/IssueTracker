@@ -1,6 +1,6 @@
 name: Ideia
 description: Tive uma ideia e vamos registrar
-labels: ['ideia']
+labels: ['ideia: sugerida']
 body:
   - type: markdown
     attributes:
