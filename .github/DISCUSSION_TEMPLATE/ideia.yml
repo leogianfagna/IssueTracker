@@ -1,5 +1,4 @@
-name: Ideia
-description: Tive uma ideia e vamos registrar
+title: Ideia
 labels: ['ideia: sugerida']
 body:
   - type: markdown
