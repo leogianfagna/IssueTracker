@@ -1,9 +1,10 @@
-labels: ['ideia: sugerida']
+labels: ['ideia: sugerida', 'relev: não medida']
 body:
   - type: markdown
     attributes:
       value: |
-        Anote suas ideias aqui quando estiverem bem formatas, aqui podemos discutir com mais clareza e depois levar para um desenvolvimento.
+        Anote suas ideias aqui (bem formatas ou não), aqui podemos discutir com mais clareza e depois levar para um desenvolvimento.
+        Discutiremos nessa aba de discussões até que entrar no cronograma para ser implementada.
   - type: dropdown
     id: servidor
     attributes:
