@@ -1,10 +1,14 @@
 # Organização AusTv
 Este é um repositório privado de organização da Austv para **reporte de bugs**, **discussão de ideias** e **tarefas/cronograma**. [Clique aqui](https://github.com/austv-minecraft/BugsAustv/issues/new/choose) para abrir algum tópico desses especificados.
 
+Trabalhos que precisam ser realizados no momento atual estarão aberto na aba de **issues**, enquanto discussões sobre o que implementar e fazer no futuro, assim como armazenamento de ideias, estão na aba **discussions**. Esses tópicos são filtrados por ordem de relevância.
+
 # Sumário
-- [Ideias propostas e discussões](https://github.com/austv-minecraft/BugsAustv/issues?q=is%3Aopen+is%3Aissue+project%3Aaustv-minecraft%2F12)
 - [Tarefas que precisam ser realizadas](https://github.com/austv-minecraft/BugsAustv/issues?q=is%3Aopen%20is%3Aissue%20project%3Aaustv-minecraft%2F10)
 - [Correções e bugs](https://github.com/austv-minecraft/BugsAustv/issues?q=is%3Aopen%20is%3Aissue%20project%3Aaustv-minecraft%2F13)
+- Ideias propostas e discussões
+  - [Implementação de ideias](https://github.com/austv-minecraft/AusTv/discussions/categories/ideia?discussions_q=)
+  - [Discussões sobre melhorias](https://github.com/austv-minecraft/AusTv/discussions/categories/opinioes?discussions_q=)
 
 # Meu trabalho
 **Clique** no seu personagem e veja seu trabalho pendente.
