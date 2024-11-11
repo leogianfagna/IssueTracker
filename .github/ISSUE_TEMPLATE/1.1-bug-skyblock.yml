@@ -1,6 +1,6 @@
 name: Bug - Skyblock
 description: Reportar um bug ou comportamento equivocado no Skyten
-labels: ['bug: confirmado']
+labels: ['bug: confirmado', '→⚪']
 assignees: Micosedeunha
 body:
   - type: markdown
