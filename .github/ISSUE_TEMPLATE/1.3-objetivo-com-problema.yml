@@ -1,6 +1,6 @@
 name: Bug - Objetivo
 title: Objetivo com problema
-labels: ['bug: confirmado']
+labels: ['bug: confirmado', '→⚪']
 description: "Reporte um objetivo que não está funcionando corretamente."
 assignees: leogianfagna
 body:
