@@ -1,5 +1,4 @@
 name: Add server labels
-# https://github.com/marketplace/actions/remove-labels
 
 on:
   issues:
@@ -17,6 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: christianvuerings/add-labels@v1
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
             servidor: henesys
         env:
