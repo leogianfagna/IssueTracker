@@ -1,12 +1,7 @@
-name: Add server labels
-
+name: Add Label
 on:
   issues:
     types: [opened]
-
-permissions:
-  issues: write
-  pull-requests: write
 
 jobs:
   add-label:
@@ -14,10 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: christianvuerings/add-labels@v1
+      - uses: tella-adam/add-labels@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
-            servidor: henesys
+            complexo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
