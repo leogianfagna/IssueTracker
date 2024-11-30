@@ -7,20 +7,6 @@ body:
     attributes:
       value: |
         Confira em responder todos os campos corretamente.
-  - type: textarea
-    attributes:
-      label: Descrição do bug
-      description: Descreva o que ocorreu de forma equivocada.
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Reprodução
-      description: |
-        Descreva detalhamente como reproduzir o bug. Se alguém que denunciou,
-        pergunte-o ou peça prints do bug e envie aqui.
-    validations:
-      required: true
   - type: dropdown
     id: servidor
     attributes:
@@ -38,6 +24,20 @@ body:
         - Redes sociais
         - Um novo servidor
       default: 0
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Descrição do bug
+      description: Descreva o que ocorreu de forma equivocada.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reprodução
+      description: |
+        Descreva detalhamente como reproduzir o bug. Se alguém que denunciou,
+        pergunte-o ou peça prints do bug e envie aqui.
     validations:
       required: true
   - type: markdown
