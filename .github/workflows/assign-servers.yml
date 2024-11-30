@@ -1,4 +1,4 @@
-name: Server label issues
+name: Label issues
 on:
   issues:
     types:
@@ -10,19 +10,23 @@ jobs:
     permissions:
       issues: write
     steps:
-      - name: Determine label based on issue body
+      - name: Normalize issue body and determine label
         id: determine_label
         run: |
-          if echo "${{ github.event.issue.body }}" | grep -q "Henesys"; then
-            echo "label=sv: henesys" >> $GITHUB_ENV
-          elif echo "${{ github.event.issue.body }}" | grep -q "Vanillew"; then
-            echo "label=sv: vanillew" >> $GITHUB_ENV
-          elif echo "${{ github.event.issue.body }}" | grep -q "Ausevento"; then
-            echo "label=sv: ausevento" >> $GITHUB_ENV
-          elif echo "${{ github.event.issue.body }}" | grep -q "Skyten"; then
-            echo "label=sv: skyten" >> $GITHUB_ENV
-          elif echo "${{ github.event.issue.body }}" | grep -q "Lobby"; then
+          # Normaliza o texto para remover quebras de linha e espaços desnecessários
+          ISSUE_BODY=$(echo "${{ github.event.issue.body }}" | tr -d '\r' | tr '\n' ' ' | sed 's/  */ /g')
+          
+          # Procura os padrões específicos no texto normalizado
+          if echo "$ISSUE_BODY" | grep -qi "Servidor referido Lobby"; then
             echo "label=sv: lobby" >> $GITHUB_ENV
+          elif echo "$ISSUE_BODY" | grep -qi "Servidor referido Vanillew"; then
+            echo "label=sv: vanillew" >> $GITHUB_ENV
+          elif echo "$ISSUE_BODY" | grep -qi "Servidor referido Ausevento"; then
+            echo "label=sv: ausevento" >> $GITHUB_ENV
+          elif echo "$ISSUE_BODY" | grep -qi "Servidor referido Skyten"; then
+            echo "label=sv: skyten" >> $GITHUB_ENV
+          elif echo "$ISSUE_BODY" | grep -qi "Servidor referido Henesys"; then
+            echo "label=sv: henesys" >> $GITHUB_ENV
           else
             echo "label=" >> $GITHUB_ENV
           fi
