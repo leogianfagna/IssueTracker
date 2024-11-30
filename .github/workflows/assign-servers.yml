@@ -1,0 +1,36 @@
+name: Server label issues
+on:
+  issues:
+    types:
+      - reopened
+      - opened
+jobs:
+  label_issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Determine label based on issue body
+        id: determine_label
+        run: |
+          if echo "${{ github.event.issue.body }}" | grep -q "Henesys"; then
+            echo "label=sv: henesys" >> $GITHUB_ENV
+          elif echo "${{ github.event.issue.body }}" | grep -q "Vanillew"; then
+            echo "label=sv: vanillew" >> $GITHUB_ENV
+          elif echo "${{ github.event.issue.body }}" | grep -q "Ausevento"; then
+            echo "label=sv: ausevento" >> $GITHUB_ENV
+          elif echo "${{ github.event.issue.body }}" | grep -q "Skyten"; then
+            echo "label=sv: skyten" >> $GITHUB_ENV
+          elif echo "${{ github.event.issue.body }}" | grep -q "Lobby"; then
+            echo "label=sv: lobby" >> $GITHUB_ENV
+          else
+            echo "label=" >> $GITHUB_ENV
+          fi
+      - name: Add label if determined
+        if: env.label != ''
+        run: gh issue edit "$NUMBER" --add-label "$LABEL"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          LABEL: ${{ env.label }}
