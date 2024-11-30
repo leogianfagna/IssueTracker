@@ -7,6 +7,16 @@ body:
     attributes:
       value: |
         Confira em responder todos os campos corretamente.
+  - type: dropdown
+    id: servidor
+    attributes:
+      label: Servidor referido
+      description: Este bug está em qual servidor?
+      options:
+        - Skyten
+      default: 0
+    validations:
+      required: false
   - type: textarea
     attributes:
       label: Descrição do bug
@@ -21,13 +31,3 @@ body:
         pergunte-o ou peça prints do bug e envie aqui.
     validations:
       required: true
-  - type: dropdown
-    id: servidor
-    attributes:
-      label: Servidor referido
-      description: Este bug está em qual servidor?
-      options:
-        - Skyten
-      default: 0
-    validations:
-      required: false
