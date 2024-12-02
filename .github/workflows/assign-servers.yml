@@ -10,42 +10,49 @@ jobs:
     permissions:
       issues: write
     steps:
-      - name: Normalize issue body and determine label
-        id: determine_label
+      - name: Normalize issue body and determine labels
+        id: determine_labels
         run: |
           # Normaliza o texto para remover quebras de linha e espaços desnecessários
           ISSUE_BODY=$(echo "${{ github.event.issue.body }}" | tr -d '\r' | tr '\n' ' ' | sed 's/  */ /g')
           
-          # Procura os padrões específicos no texto normalizado
+          # Inicializa a variável para armazenar labels
+          LABELS=""
+
           # Prioridade
           if echo "$ISSUE_BODY" | grep -qi "Gravidade Baixa"; then
-            echo "label=→🟢" >> $GITHUB_ENV
+            LABELS="$LABELS,→🟢"
           elif echo "$ISSUE_BODY" | grep -qi "Gravidade Média"; then
-            echo "label=→🟡" >> $GITHUB_ENV
+            LABELS="$LABELS,→🟡"
           elif echo "$ISSUE_BODY" | grep -qi "Gravidade Alta"; then
-            echo "label=→🟠" >> $GITHUB_ENV
+            LABELS="$LABELS,→🟠"
           elif echo "$ISSUE_BODY" | grep -qi "Gravidade Urgência total"; then
-            echo "label=→🔴" >> $GITHUB_ENV
+            LABELS="$LABELS,→🔴"
+          fi
           
           # Servidores
           if echo "$ISSUE_BODY" | grep -qi "Servidor referido Lobby"; then
-            echo "label=sv: lobby" >> $GITHUB_ENV
+            LABELS="$LABELS,sv: lobby"
           elif echo "$ISSUE_BODY" | grep -qi "Servidor referido Vanillew"; then
-            echo "label=sv: vanillew" >> $GITHUB_ENV
+            LABELS="$LABELS,sv: vanillew"
           elif echo "$ISSUE_BODY" | grep -qi "Servidor referido Ausevento"; then
-            echo "label=sv: ausevento" >> $GITHUB_ENV
+            LABELS="$LABELS,sv: ausevento"
           elif echo "$ISSUE_BODY" | grep -qi "Servidor referido Skyten"; then
-            echo "label=sv: skyten" >> $GITHUB_ENV
+            LABELS="$LABELS,sv: skyten"
           elif echo "$ISSUE_BODY" | grep -qi "Servidor referido Henesys"; then
-            echo "label=sv: henesys" >> $GITHUB_ENV
-          else
-            echo "label=" >> $GITHUB_ENV
+            LABELS="$LABELS,sv: henesys"
           fi
-      - name: Add label if determined
-        if: env.label != ''
-        run: gh issue edit "$NUMBER" --add-label "$LABEL"
+
+          # Remove vírgula inicial, se existir
+          LABELS=$(echo "$LABELS" | sed 's/^,//')
+          
+          # Define as labels no ambiente do workflow
+          echo "labels=$LABELS" >> $GITHUB_ENV
+      - name: Add labels if determined
+        if: env.labels != ''
+        run: gh issue edit "$NUMBER" --add-label "$LABELS"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           NUMBER: ${{ github.event.issue.number }}
-          LABEL: ${{ env.label }}
+          LABELS: ${{ env.labels }}
