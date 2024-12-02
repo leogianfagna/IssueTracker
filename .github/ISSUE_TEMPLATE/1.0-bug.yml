@@ -1,7 +1,7 @@
 name: Bug
 description: Reportar um bug ou comportamento equivocado
 labels: ['bug: confirmado', '→⚪']
-types: ['Bug']
+type: ['Bug']
 assignees: leogianfagna
 body:
   - type: markdown
