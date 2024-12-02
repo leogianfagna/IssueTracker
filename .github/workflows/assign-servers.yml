@@ -17,6 +17,17 @@ jobs:
           ISSUE_BODY=$(echo "${{ github.event.issue.body }}" | tr -d '\r' | tr '\n' ' ' | sed 's/  */ /g')
           
           # Procura os padrões específicos no texto normalizado
+          # Prioridade
+          if echo "$ISSUE_BODY" | grep -qi "Gravidade Baixa"; then
+            echo "label=→🟢" >> $GITHUB_ENV
+          elif echo "$ISSUE_BODY" | grep -qi "Gravidade Média"; then
+            echo "label=→🟡" >> $GITHUB_ENV
+          elif echo "$ISSUE_BODY" | grep -qi "Gravidade Alta"; then
+            echo "label=→🟠" >> $GITHUB_ENV
+          elif echo "$ISSUE_BODY" | grep -qi "Gravidade Urgência total"; then
+            echo "label=→🔴" >> $GITHUB_ENV
+          
+          # Servidores
           if echo "$ISSUE_BODY" | grep -qi "Servidor referido Lobby"; then
             echo "label=sv: lobby" >> $GITHUB_ENV
           elif echo "$ISSUE_BODY" | grep -qi "Servidor referido Vanillew"; then
