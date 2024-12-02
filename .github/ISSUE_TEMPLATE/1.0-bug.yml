@@ -1,6 +1,6 @@
 name: Bug
 description: Reportar um bug ou comportamento equivocado
-labels: ['bug: confirmado', '→⚪']
+# labels: ['bug: confirmado', '→⚪']
 type: 'Bug'
 assignees: leogianfagna
 body:
@@ -57,7 +57,7 @@ body:
         - Urgência total
       default: 0
     validations:
-      required: true
+      required: false
   - type: markdown
     attributes:
       value: |
