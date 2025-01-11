@@ -20,6 +20,9 @@ Trabalhos que precisam ser realizados no momento atual estarão aberto na aba de
 ### Ajudantes
 [![image](https://github.com/user-attachments/assets/08c17b4c-b7a9-4fdf-b362-b1a4e675c336)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/Yokiro27)
 [![image](https://github.com/user-attachments/assets/79e56a05-bbf5-4dfc-ae8e-2a23446d0dae)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/buniiswie)
-[![image](https://github.com/user-attachments/assets/94eb19e2-c3f3-4cdf-aaf7-3d5116f6cb0a)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/steliberatori)
-[![image](https://github.com/user-attachments/assets/0be30945-556b-4ae8-a3bf-e480fceec505)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/kyuu123)
 [![image](https://github.com/user-attachments/assets/dba4448b-e980-4e4d-827e-190c5eff8b40)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/andrelsbc)
+[![image](https://github.com/user-attachments/assets/19c6758d-da7b-4c1b-b993-8fb3f7a9feb9)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/vmizga)
+[![image](https://github.com/user-attachments/assets/0603a5aa-cd8d-4610-9cd6-69711c9a20f6)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/aamandarfl)
+[![image](https://github.com/user-attachments/assets/0603a5aa-cd8d-4610-9cd6-69711c9a20f6)](https://github.com/austv-minecraft/BugsAustv/issues/created_by/HARUzkk)
+
+
