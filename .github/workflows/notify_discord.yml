@@ -2,7 +2,7 @@ name: Notificar Discord
 
 on:
   issues:
-    types: [opened]
+    types: [opened, closed]
   issue_comment:
     types: [created]
 
