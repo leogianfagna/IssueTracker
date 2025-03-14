@@ -15,6 +15,10 @@ if [ "$EVENT_TYPE" = "issues" ] && [ "$EVENT_ACTION" = "opened" ]; then
   ISSUE_TITLE=$(jq -r '.issue.title' "$GITHUB_EVENT_PATH")
   ISSUE_URL=$(jq -r '.issue.html_url' "$GITHUB_EVENT_PATH")
   MESSAGE=":rotating_light: Novo problema detectado: [**$ISSUE_TITLE**]($ISSUE_URL)."
+elif [ "$EVENT_TYPE" = "issues" ] && [ "$EVENT_ACTION" = "closed" ]; then
+  ISSUE_TITLE=$(jq -r '.issue.title' "$GITHUB_EVENT_PATH")
+  ISSUE_URL=$(jq -r '.issue.html_url' "$GITHUB_EVENT_PATH")
+  MESSAGE=":white_check_mark: Problema resolvido: [**$ISSUE_TITLE**]($ISSUE_URL)."
 elif [ "$EVENT_TYPE" = "issue_comment" ] && [ "$EVENT_ACTION" = "created" ]; then
   COMMENT_BODY=$(jq -r '.comment.body' "$GITHUB_EVENT_PATH")
   ISSUE_TITLE=$(jq -r '.issue.title' "$GITHUB_EVENT_PATH")
